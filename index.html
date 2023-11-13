@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>클라우드 컴퓨팅</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: NanumGothic, "나눔고딕", NanumGothic, "돋움", dotum,
+          sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        margin: 0 0 10px;
+      }
+      .weekly_title {
+        font-size: 16px;
+        margin: 0;
+        color: #333;
+        font-weight: 700;
+        padding: 21px 28px 20px;
+        background-color: #e4f0eb;
+        font-family: NanumGothic, "나눔고딕", NanumGothic, "돋움", dotum,
+          Helvetica, sans-serif, AppleGothic;
+      }
+      .weekly_table {
+        width: 100%;
+        height: 60px;
+      }
+      ul.weekly {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+      ul.weekly li {
+        float: left;
+        border-right: 1px #ebebeb solid;
+        text-align: center;
+        font-weight: 600;
+        height: 100%;
+        width: 6.25%;
+      }
+      ul.weekly li p {
+        cursor: pointer;
+        margin: 13px auto 10px;
+        width: 32px;
+        height: 32px;
+        line-height: 30px;
+        border-radius: 50%;
+        border: 1px #ccc solid;
+        background-color: #338ccc;
+        border-color: #338ccc;
+        color: #fff;
+      }
+      .main {
+        padding: 0px 250px 0px 250px;
+      }
+      div.summary p {
+        font-size: 14px;
+        color: rgb(102, 102, 102);
+      }
+      .border {
+        border: 1px #ebebeb solid;
+      }
+      .list-unstyled {
+        list-style: none;
+        padding: 0;
+      }
+      .section {
+        border-bottom: 1px solid #e0e0e0;
+        padding: 30px 27px 38px 27px;
+      }
+      a.week-link {
+        font-size: 16px;
+        margin-bottom: 12px;
+        color: #0b4da2;
+      }
+      .summary-item {
+        padding: 7px 12px;
+      }
+      .file-icon {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+      }
+      .file-label {
+        color: #333;
+        font-size: 14px;
+      }
+      .file-size {
+        color: #31708f;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="6821122.png"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />Cloud Computing</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Lecture</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tech.html">Technologies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="trend.html">Trends</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <br /><br />
+      <section>
+        <div class="border" style="margin-bottom: 30px">
+          <h2 class="weekly_title">주차별 학습 내용</h2>
+          <div class="weekly_table">
+            <ul class="weekly">
+              <li class="test">
+                <a href="#week1" style="text-decoration: none"> <p>1</p></a>
+              </li>
+              <li>
+                <a href="#week2" style="text-decoration: none"> <p>2</p></a>
+              </li>
+              <li>
+                <a href="#week3" style="text-decoration: none"> <p>3</p></a>
+              </li>
+              <li>
+                <a href="#week4" style="text-decoration: none"> <p>4</p></a>
+              </li>
+              <li>
+                <a href="#week5" style="text-decoration: none"> <p>5</p></a>
+              </li>
+              <li>
+                <a href="#week6" style="text-decoration: none">
+                  <p>6</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week7" style="text-decoration: none">
+                  <p>7</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week8" style="text-decoration: none">
+                  <p>8</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week9" style="text-decoration: none">
+                  <p>9</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week10" style="text-decoration: none">
+                  <p>10</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week11" style="text-decoration: none">
+                  <p>11</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week12" style="text-decoration: none">
+                  <p>12</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week13" style="text-decoration: none">
+                  <p>13</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week14" style="text-decoration: none">
+                  <p>14</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week15" style="text-decoration: none">
+                  <p>15</p>
+                </a>
+              </li>
+              <li>
+                <a href="#week16" style="text-decoration: none">
+                  <p>16</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border">
+          <ul class="list-unstyled" style="padding: 0px">
+            <section id="week1" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week1" class="week-link">
+                      1주차 [8월28일 - 9월03일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. 강의 개요</p>
+                <p>- 강의 내용</p>
+                <p>- 강의 목적</p>
+                <p>- 평가 방법</p>
+                <p>- 기타</p>
+                <p><br /></p>
+                <p>2. AWS 회원 가입</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">강의 개요</span>
+                        <span class="file-size">105.8KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section id="week2" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week2" class="week-link">
+                      2주차 [9월04일 - 9월10일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. 클라우드 컴퓨팅 소개</p>
+                <p>2. 클라우드 컴퓨팅 요소 기술</p>
+                <p>3. 클라우드 컴퓨팅 서비스</p>
+                <p>4. 실제 사례</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >Cloud Computing - Introduction파일</span
+                        >
+                        <span class="file-size">2.5MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >Cloud Computing - Technologies</span
+                        >
+                        <span class="file-size">2.2MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >Cloud Computing - Services파일
+                        </span>
+                        <span class="file-size">1.1MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >Cloud Computing - Examples</span
+                        >
+                        <span class="file-size">1.4MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section id="week3" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week3" class="week-link">
+                      3주차 [9월11일 - 9월17일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. AWS Introduction</p>
+                <p>2. AWS Services - Computing</p>
+                <p>3. AWS Services - IAM</p>
+                <p>4. AWS 실습 1 - 계정관리 및 Freetier</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Introduction</span>
+                        <span class="file-size">1.9MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Service - Computing </span>
+                        <span class="file-size">2.2MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Service - IAM </span>
+                        <span class="file-size">1.3MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS Practice 1 - 계정관리 및 Freetier
+                        </span>
+                        <span class="file-size">4.3MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section id="week4" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week4" class="week-link">
+                      4주차 [9월18일 - 9월24일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. AWS Services - Storage</p>
+                <p>2. AWS Service - Database</p>
+                <p>3. AWS 이론 1 - EC2</p>
+                <p>4. AWS 실습 2 - EC2</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Service - Storage</span>
+                        <span class="file-size">1.4MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Service - Database </span>
+                        <span class="file-size">3.8MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Theory 1 - EC2 </span>
+                        <span class="file-size">1.3MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Practice 2 - EC2 </span>
+                        <span class="file-size">592KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">참고 - AWS - EC2 </span>
+                        <span class="file-size">15.5MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >참고 - 스토리지비용관리전략
+                        </span>
+                        <span class="file-size">11.2MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section id="week5" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week5" class="week-link">
+                      5주차 [9월25일 - 10월01일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. AWS Service - Network</p>
+                <p>2. AWS Services - CloudFront</p>
+                <p>3. AWS 실습 3 - LAMP Web Server 구성</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Service - Network</span>
+                        <span class="file-size">3.3MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS Services - CloudFront</span
+                        >
+                        <span class="file-size">975.5KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS Practice 3 - LAMP Web Server</span
+                        >
+                        <span class="file-size">161.3KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section id="week6" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week6" class="week-link">
+                      6주차 [10월02일 - 10월08일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. AWS 실습 4 - S3에 정적 웹사이트 구축</p>
+                <p>2. AWS 실습 5 - Contents Delivery Service</p>
+                <p>3. AWS Service - Security</p>
+                <p>4. AWS Service - Cost & Billing</p>
+                <p>5. AWS 이론 2 - Load Balancing</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS 실습 4 - Static Website on S3</span
+                        >
+                        <span class="file-size">863.9KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS 실습 5 - Contents Delivery Service</span
+                        >
+                        <span class="file-size">342.4KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Service - Security</span>
+                        <span class="file-size">4.2MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS Service - Cost & Billing</span
+                        >
+                        <span class="file-size">6.3MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS 이론 2 - Load Balancing</span
+                        >
+                        <span class="file-size">379.6KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section id="week7" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week7" class="week-link">
+                      7주차 [10월09일 - 10월15일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. AWS 실습 6 - Elastic Load Balancer</p>
+                <p>2. AWS 이론 3 - Auto Scaling</p>
+                <p>3. AWS 실습 7 - EBS</p>
+                <p>4. AWS 실습 8 - VPC</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS 실습 6 - Elastic Load Balancer</span
+                        >
+                        <span class="file-size">2.3MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS 이론 3 - Auto Scaling</span
+                        >
+                        <span class="file-size">317.9KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS 실습 7 - EBS</span>
+                        <span class="file-size">167.3KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS 실습 8 - VPC</span>
+                        <span class="file-size">732.1KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section id="week8" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week8" class="week-link">
+                      8주차 [10월16일 - 10월22일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>중간고사</p>
+                <br />
+              </div>
+            </section>
+            <section id="week9" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week9" class="week-link">
+                      9주차 [10월23일 - 10월29일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. AWS Practice 9 - Auto Scaling</p>
+                <p>2. AWS Theory 4 - Elastic Beanstalk</p>
+                <p>3. AWS Practice 10 - Elastic Beanstalk</p>
+                <p>4. AWS Theory 5 - Serverless</p>
+                <p>5. AWS Theory 6 - Lambda</p>
+                <p>6. AWS Practice 11 - Lambda</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS 실습 9 - Auto Scaling</span
+                        >
+                        <span class="file-size">1.3MB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS 이론 4 - Elastic Beanstalk</span
+                        >
+                        <span class="file-size">315.1KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >AWS 실습 10 - Elastic Beanstalk</span
+                        >
+                        <span class="file-size">189.6KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS 이론 5 - Serverless</span>
+                        <span class="file-size">374.9KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS 이론 6 - Lambda</span>
+                        <span class="file-size">482KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS 실습 11 - Lambda</span>
+                        <span class="file-size">664.8KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section id="week10" class="section">
+              <li>
+                <div>
+                  <h3>
+                    <a href="#week10" class="week-link">
+                      10주차 [10월30일 - 11월05일]
+                    </a>
+                  </h3>
+                </div>
+              </li>
+              <div class="summary">
+                <p></p>
+                <p>1. AWS Lambda 연습</p>
+                <p>2. AWS Practice 12 - RDS 1</p>
+                <p>3. AWS Practice 13 - RDS 2</p>
+                <br />
+              </div>
+              <div style="margin: 0; padding: 0">
+                <ul class="list-unstyled" style="padding: 0">
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label"
+                          >참고 - Lambda를 최대로 이용하는 방법</span
+                        >
+                        <span class="file-size">420.5KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Lambda 연습 1</span>
+                        <span class="file-size">134.9KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS Lambda 연습 2</span>
+                        <span class="file-size">154.8KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS 실습 12 - RDS 1</span>
+                        <span class="file-size">129.7KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="summary-item">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&amp;component=core&amp;rev=1699477201&amp;image=f%2Fpdf-24"
+                          alt="파일"
+                          class="file-icon"
+                        />
+                        <span class="file-label">AWS 실습 13 - RDS 2</span>
+                        <span class="file-size">206.9KB PDF 문서</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <br />
+    <hr />
+    <footer style="text-align: center">
+      Copyright &copy; 2023 by Chan-Geun All Rights Reserved
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
